@@ -43,3 +43,5 @@ az vm create \
 echo "The public DNS name for your load balanced set is http://$publicdns.westeurope.cloudapp.azure.com. 
 
 You can SSH into your VM with ops@$publicdns.westeurope.cloudapp.azure.com on port 22."
+
+TEST123
