@@ -10,4 +10,5 @@ az vm create \
   --ssh-key-value ~/.ssh/id_rsa.pub \
   --resource-group myResourceGroup \
   --location westus \
-  --name myVM
+  --name myVM \
+  --no-wait
