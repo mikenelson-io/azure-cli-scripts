@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-resourceGroupName=myResourceGroup
+resourceGroupName=myResourceGroupNSG
 location=westeurope
 publicdns=mypublicdns$RANDOM
 
