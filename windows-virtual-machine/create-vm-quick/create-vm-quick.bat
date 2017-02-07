@@ -8,7 +8,7 @@ az group create --name %resourceGroupName% --location %location%
 REM Create a virtual machine. 
 az vm create ^
   --image UbuntuLTS ^
-  --admin-username ops ^
+  --admin-username opsadmin ^
   --ssh-key-value ~/.ssh/id_rsa.pub ^
   --resource-group %resourceGroupName% ^
   --location %location% ^

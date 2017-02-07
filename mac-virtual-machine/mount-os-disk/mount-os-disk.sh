@@ -14,7 +14,7 @@ az vm delete -g $resourceGroupName -n $sourcevm
 # Create a new virtual machine.
 az vm create \
   --image UbuntuLTS \
-  --admin-username ops \
+  --admin-username opsadmin \
   --ssh-key-value ~/.ssh/id_rsa.pub \
   --resource-group $resourceGroupName \
   --location $location \

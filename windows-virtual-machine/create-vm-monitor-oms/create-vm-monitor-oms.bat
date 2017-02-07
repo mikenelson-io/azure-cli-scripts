@@ -53,7 +53,7 @@ az vm create \
   --storage-account $storageaccount \
   --image UbuntuLTS \
   --ssh-key-value ~/.ssh/id_rsa.pub \
-  --admin-username ops
+  --admin-username opsadmin
 
 # Install and configure the OMS agent.
 az vm extension set \

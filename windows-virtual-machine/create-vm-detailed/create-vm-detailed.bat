@@ -38,5 +38,5 @@ az vm create ^
     --nics myNic1 ^
     --image UbuntuLTS ^
     --ssh-key-value ~/.ssh/id_rsa.pub ^
-    --admin-username ops ^
+    --admin-username opsadmin ^
     --no-wait

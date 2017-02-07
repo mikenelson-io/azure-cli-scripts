@@ -48,7 +48,7 @@ az vm create \
   --nics myNic1 \
   --image UbuntuLTS \
   --ssh-key-value ~/.ssh/id_rsa.pub \
-  --admin-username ops
+  --admin-username opsadmin
 
 # Install Docker and start container.
 az vm extension set \
