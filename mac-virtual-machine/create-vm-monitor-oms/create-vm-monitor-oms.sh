@@ -27,8 +27,8 @@ az network nsg rule create --resource-group myResourceGroup \
   --access allow
 
 # Create a virtual network card and associate with public IP address and NSG.
-az network nic create --resource-group myResourceGroup --location westeurope --name myNic1 \
-  --vnet-name myVnet --subnet mySubnet --network-security-group myNetworkSecurityGroup \
+az network nic create --resource-group myResourceGroup --location westeurope --name myNic \
+  --vnet-name myNic1 --subnet mySubnet --network-security-group myNetworkSecurityGroup \
   --public-ip-address myPublicIP
 
 # Create a virtual machine. 
