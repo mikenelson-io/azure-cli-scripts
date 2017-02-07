@@ -5,7 +5,6 @@ resourceGroupName=myResourceGroup
 location=westeurope
 publicdns=mypublicdns$RANDOM
 
-
 # Create a resource group.
 az group create --name $resourceGroupName --location $location
 

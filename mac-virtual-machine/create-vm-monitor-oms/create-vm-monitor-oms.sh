@@ -1,13 +1,13 @@
 #!/bin/sh
 
+# Update with OMS Id and OMS key.
+omsid=myOMSId
+omskey=myOMSKey
+
 # Variables
 resourceGroupName=myResourceGroup
 location=westeurope
 publicdns=mypublicdns$RANDOM
-
-# Update with OMS Id and OMS key.
-omsid=myOMSId
-omskey=myOMSKey
 
 # Create a resource group.
 az group create --name $resourceGroupName --location $location
