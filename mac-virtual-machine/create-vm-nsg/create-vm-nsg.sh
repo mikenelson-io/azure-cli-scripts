@@ -3,15 +3,10 @@
 # Variables
 resourceGroupName=myResourceGroup
 location=westeurope
-storageaccount=mystorageaccount$RANDOM
 publicdns=mypublicdns$RANDOM
 
 # Create a resource group.
 az group create --name $resourceGroupName --location $location
-
-# Create a storage account.
-az storage account create --resource-group $resourceGroupName --location $location \
-  --name $storageaccount --kind Storage --sku Standard_LRS
 
 # Create a virtual network and subnet (front end).
 az network vnet create --resource-group $resourceGroupName --location $location --name myVnet \
@@ -83,9 +78,6 @@ az vm create \
     --name myVMFrontEnd \
     --location $location \
     --nics myNic1 \
-    --vnet myVnet \
-    --subnet-name mySubnetFrontEnd \
-    --storage-account $storageaccount \
     --image UbuntuLTS \
     --ssh-key-value ~/.ssh/id_rsa.pub \
     --admin-username ops \
@@ -97,9 +89,6 @@ az vm create \
     --name myVMBackEnd \
     --location $location \
     --nics myNic2\
-    --vnet myVnet \
-    --subnet-name mySubnetBackEnd \
-    --storage-account $storageaccount \
     --image UbuntuLTS \
     --ssh-key-value ~/.ssh/id_rsa.pub \
     --admin-username ops \

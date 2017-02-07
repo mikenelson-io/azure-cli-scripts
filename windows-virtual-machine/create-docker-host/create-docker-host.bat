@@ -1,15 +1,10 @@
 REM Variables
 set resourceGroupName=myResourceGroup
 set location=westeurope
-set storageaccount=mystorageaccount%RANDOM%
 set publicdns=mypublicdns%RANDOM%
 
 REM Create a resource group.
 az group create --name %resourceGroupName% --location %location%
-
-REM Create a storage account.
-az storage account create --resource-group %resourceGroupName% --location %location% ^
-  --name %storageaccount% --kind Storage --sku Standard_LRS
 
 REM Create a virtual network.
 az network vnet create --resource-group %resourceGroupName% --location %location% --name myVnet ^
@@ -48,10 +43,6 @@ az vm create ^
   --name myVM1 ^
   --location %location% ^
   --nics myNic1 ^
-  --vnet myVnet ^
-  --subnet-name mySubnet ^
-  --nsg myNetworkSecurityGroup ^
-  --storage-account %storageaccount% ^
   --image UbuntuLTS ^
   --ssh-key-value c:\ssh\id_rsa.pub ^
   --admin-username ops

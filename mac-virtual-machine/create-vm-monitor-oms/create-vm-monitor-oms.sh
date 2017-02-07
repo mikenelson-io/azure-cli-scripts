@@ -3,7 +3,6 @@
 # Variables
 resourceGroupName=myResourceGroup
 location=westeurope
-storageaccount=mystorageaccount$RANDOM
 publicdns=mypublicdns$RANDOM
 
 # Update with OMS Id and OMS key.
@@ -12,10 +11,6 @@ omskey=myOMSKey
 
 # Create a resource group.
 az group create --name $resourceGroupName --location $location
-
-# Create a storage account.
-az storage account create --resource-group $resourceGroupName --location $location \
-  --name $storageaccount --kind Storage --sku Standard_LRS
 
 # Create a virtual network.
 az network vnet create --resource-group $resourceGroupName --location $location --name myVnet \
@@ -47,10 +42,6 @@ az vm create \
   --name myVM1 \
   --location $location \
   --nics myNic1 \
-  --vnet myVnet \
-  --subnet-name mySubnet \
-  --nsg myNetworkSecurityGroup \
-  --storage-account $storageaccount \
   --image UbuntuLTS \
   --ssh-key-value ~/.ssh/id_rsa.pub \
   --admin-username ops

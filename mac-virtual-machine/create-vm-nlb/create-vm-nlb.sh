@@ -3,15 +3,10 @@
 # Variables
 resourceGroupName=myResourceGroup
 location=westeurope
-storageaccount=mystorageaccount$RANDOM
 publicdns=mypublicdns$RANDOM
 
 # Create a resource group.
 az group create --name $resourceGroupName --location $location
-
-# Create a storage account.
-az storage account create --resource-group $resourceGroupName --location $location \
-  --name $storageaccount --kind Storage --sku Standard_LRS
 
 # Create a virtual network.
 az network vnet create --resource-group $resourceGroupName --location $location --name myVnet \
@@ -81,10 +76,6 @@ for i in `seq 1 3`; do
     --location $location \
     --availability-set myAvailabilitySet \
     --nics myNic$i \
-    --vnet myVnet \
-    --subnet-name mySubnet \
-    --nsg myNetworkSecurityGroup \
-    --storage-account $storageaccount \
     --image UbuntuLTS \
     --ssh-key-value ~/.ssh/id_rsa.pub \
     --admin-username ops \
