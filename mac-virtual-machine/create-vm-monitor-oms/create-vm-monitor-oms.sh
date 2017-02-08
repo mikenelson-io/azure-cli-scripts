@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Update with OMS Id and OMS key.
+# OMS Id and OMS key.
 omsid=<Replace with your OMS Id>
 omskey=<Replace with your OMS key>
 
