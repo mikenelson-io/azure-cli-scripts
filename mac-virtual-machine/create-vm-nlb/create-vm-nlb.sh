@@ -73,6 +73,6 @@ for i in `seq 1 3`; do
     --nics myNic$i \
     --image UbuntuLTS \
     --ssh-key-value ~/.ssh/id_rsa.pub \
-    --admin-username opsadmin \
+    --admin-username azureuser \
     --no-wait
 done

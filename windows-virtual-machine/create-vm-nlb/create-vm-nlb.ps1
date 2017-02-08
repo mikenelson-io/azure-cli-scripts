@@ -82,7 +82,7 @@ while ($i -le 3) {
     --nsg myNetworkSecurityGroup `
     --image UbuntuLTS `
     --ssh-key-value ~/.ssh/id_rsa.pub `
-    --admin-username ops `
+    --admin-username azureuser `
     --no-wait
     $i ++
 }

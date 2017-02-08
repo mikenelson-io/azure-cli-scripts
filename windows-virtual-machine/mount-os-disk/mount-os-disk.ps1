@@ -10,7 +10,7 @@ az vm delete -g myResourceGroup -n $sourcevm
 # Create a new virtual machine.
 az vm create `
   --image UbuntuLTS `
-  --admin-username opsadmin `
+  --admin-username azureuser `
   --ssh-key-value c:\ssh\id_rsa.pub `
   --resource-group myResourceGroup `
   --location westeurope `

@@ -76,7 +76,7 @@ az vm create \
     --nics myNic1 \
     --image UbuntuLTS \
     --ssh-key-value c:\ssh\id_rsa.pub \
-    --admin-username opsadmin \
+    --admin-username azureuser \
     --no-wait
 
 # Create a virtual machine. 
@@ -87,5 +87,5 @@ az vm create \
     --nics myNic2\
     --image UbuntuLTS \
     --ssh-key-value c:\ssh\id_rsa.pub \
-    --admin-username opsadmin \
+    --admin-username azureuser \
     --no-wait

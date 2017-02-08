@@ -43,7 +43,7 @@ az vm create `
   --nics myNic1 `
   --image UbuntuLTS `
   --ssh-key-value c:\ssh\id_rsa.pub `
-  --admin-username opsadmin
+  --admin-username azureuser
 
 # Install Docker and start container.
 az vm extension set `
