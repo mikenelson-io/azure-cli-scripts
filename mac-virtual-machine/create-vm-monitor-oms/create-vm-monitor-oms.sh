@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Update with OMS Id and OMS key.
-omsid=myOMSId
-omskey=myOMSKey
+omsid=<Replace with your OMS Id>
+omskey=<Replace with your OMS key>
 
 # Create a resource group.
 az group create --name myResourceGroup --location westeurope
